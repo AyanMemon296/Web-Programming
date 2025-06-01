@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wildcard Selectors Example</title>
+    <style>
+        /* 1. Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Starts with selector */
+        a[href^="https"] {
+            color: green;
+        }
+
+        /* 3. Ends with selector */
+        img[src$=".jpg"] {
+            border: 2px solid red;
+        }
+
+        /* 4. Contains selector */
+        a[href*="ayan"] {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Wildcard Selector Examples</h2>
+
+    <p><a href="https://google.com">Visit Google (starts with https)</a></p>
+    <p><a href="http://ayanwebsite.com">Visit Ayan's Website (contains 'ayan')</a></p>
+    <p><a href="http://example.com">Visit Example</a></p>
+
+    <img src="flower.jpg" alt="Flower Image">
+    <img src="logo.png" alt="Logo Image">
+
+</body>
+
+</html>

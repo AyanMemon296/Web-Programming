@@ -1,0 +1,98 @@
+<!-- Write a HTML snippet to show each letter of a word RAINBOW with new color, giving a rainbow effect -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RAINBOW Word</title>
+</head>
+
+<body>
+    <h1>
+        <span style="color:red;">R</span>
+        <span style="color:orange;">A</span>
+        <span style="color:yellow;">I</span>
+        <span style="color:green;">N</span>
+        <span style="color:blue;">B</span>
+        <span style="color:indigo;">O</span>
+        <span style="color:violet;">W</span>
+    </h1>
+</body>
+
+</html>
+
+
+
+<!-- Write an HTML snippet with CSS for following effects 
+1. link: after visited red color and before visited green color 
+2. table with even rows black and odd rows green color 
+3. Text color-green, Text case-uppercase -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Effects</title>
+    <style>
+        /* Link colors */
+        a:link {
+            color: green;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        /* Table row colors */
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: green;
+            color: white;
+        }
+
+        /* Text styling */
+        .green-uppercase {
+            color: green;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Link Example -->
+    <p><a href="https://example.com">Visit Example</a></p>
+
+    <!-- Table Example -->
+    <table>
+        <tr>
+            <td>Row 1</td>
+        </tr>
+        <tr>
+            <td>Row 2</td>
+        </tr>
+        <tr>
+            <td>Row 3</td>
+        </tr>
+        <tr>
+            <td>Row 4</td>
+        </tr>
+    </table>
+
+    <!-- Text Example -->
+    <p class="green-uppercase">this is green uppercase text</p>
+
+</body>
+
+</html>
