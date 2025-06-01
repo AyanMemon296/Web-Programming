@@ -1,0 +1,229 @@
+<!-- Table Example -->
+
+<h3>Table Example</h3>
+
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+    </tr>
+    <tr>
+        <td>HTML</td>
+        <td>90</td>
+    </tr>
+</table>
+
+<br><br>
+
+<!-- Colspan Example -->
+
+<h3>Colspan Example</h3>
+
+<table border="1">
+    <tr>
+        <th colspan="2">Student Info</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Ayan</td>
+    </tr>
+</table>
+
+<br><br>
+
+<!-- Rowspan Example -->
+
+<h3>Rowspan Example</h3>
+
+<table border="1">
+    <tr>
+        <td rowspan="2">Ayan</td>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td>CSS</td>
+    </tr>
+</table>
+
+<br><br>
+
+<!-- Exam Tables Q. of rowspan & colspan -->
+
+<h3>Exam Tables Q. of rowspan & colspan</h3>
+
+<h4>Q.1</h4>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lecture Timetable</title>
+    <style>
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Lecture Timetable</h2>
+    <table>
+        <tr>
+            <td rowspan="2" style="vertical-align: top;">Day</td>
+            <td colspan="3" style="text-align: left;">Lecture Timings</td>
+        </tr>
+        <tr>
+            <td>10:30am-11:30am</td>
+            <td>11:30am-12:30pm</td>
+            <td>1:00pm-2:00pm</td>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>DS</td>
+            <td>SE</td>
+            <td>WP</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>OS</td>
+            <td>CN</td>
+            <td>ML</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>DS</td>
+            <td>WP</td>
+            <td>CN</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>OS</td>
+            <td>SE</td>
+            <td>ML</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td colspan="3" style="text-align: center;">Test day</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+
+
+<h4>Q.2</h4>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fasting Blood Sugar Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Fasting Blood Sugar Table</h2>
+    <table>
+        <tr>
+            <td rowspan="2">State of Health</td>
+            <td colspan="2">Fasting Value</td>
+        </tr>
+        <tr>
+            <td>Minimum</td>
+            <td>Maximum</td>
+        </tr>
+        <tr>
+            <td>Healthy</td>
+            <td>70</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Pre-Diabetes</td>
+            <td>101</td>
+            <td>126</td>
+        </tr>
+        <tr>
+            <td>Diabetes</td>
+            <td>More than 126</td>
+            <td>N/A</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+
+
+<h4>Q.3</h4>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Final Complex Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+
+        u {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <!-- Row 1 -->
+        <tr>
+            <th rowspan="2" colspan="2">C1</th>
+            <th rowspan="2">C2</th>
+            <th colspan="2">C3</th>
+        </tr>
+
+        <!-- Row 2 -->
+        <tr>
+            <td><u>C3.1</u></td>
+            <td><u>C3.2</u></td>
+        </tr>
+
+        <!-- Row 3 -->
+        <tr>
+            <th rowspan="2">R1</th>
+            <!-- <td>R1a</td> -->
+            <td><s>R1a</s></td>
+
+            <td>123</td>
+            <td>456</td>
+            <td>789</td>
+        </tr>
+
+        <!-- Row 4 -->
+        <tr>
+            <td>&lt;HTML&gt;</td>
+            <td colspan="3">E = m * c<sup>2</sup></td>
+        </tr>
+    </table>
+</body>
+
+</html>

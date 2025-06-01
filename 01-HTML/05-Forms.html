@@ -1,0 +1,161 @@
+<!-- Form Validation Q. -->
+
+<h3>Form Validation Q.</h3>
+
+<form>
+    Name: <input type="text" required><br>
+    Age: <input type="number" min="1" max="100"><br>
+    Email: <input type="email" required><br>
+    Phone: <input type="text" pattern="[0-9]{10}" maxlength="10"><br>
+    <input type="submit">
+</form>
+<br><br>
+
+
+
+<!-- Form Exam Q. -->
+
+<h3>Form Q.1 </h3>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form action="submit.php" method="post">
+        Name: <input type="text" name="name" required><br><br>
+
+        Roll No.: <input type="text" name="rollno" required><br><br>
+
+        Semester: <input type="number" name="semester" min="1" max="8"><br><br>
+
+        Email: <input type="email" name="email" required><br><br>
+
+        Mobile Number: <input type="text" name="mobile" pattern="[0-9]{10}" maxlength="10"><br><br>
+
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        Hobbies:
+        <input type="checkbox" name="hobby1" value="Reading"> Reading
+        <input type="checkbox" name="hobby2" value="Music"> Music
+        <input type="checkbox" name="hobby3" value="Sports"> Sports<br><br>
+
+        Feedback:<br>
+        <textarea name="feedback" rows="4" cols="40"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>
+<br><br>
+
+
+
+<h3>Form Q.2 </h3>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Entry Form</title>
+</head>
+
+<body>
+
+    <h2>Library Book Details Form</h2>
+
+    <form action="submit.php" method="post">
+
+        Book Title:
+        <input type="text" name="BookTitle" required><br><br>
+
+        Author Name:
+        <input type="text" name="AuthorName" required><br><br>
+
+        Publication:
+        <select name="Publication">
+            <option value="Penguin">Penguin</option>
+            <option value="Oxford">Oxford</option>
+            <option value="Cambridge">Cambridge</option>
+            <option value="McGrawHill">McGraw Hill</option>
+        </select><br><br>
+
+        Domain:<br>
+        <input type="checkbox" name="Domain" value="Science"> Science<br>
+        <input type="checkbox" name="Domain" value="Literature"> Literature<br>
+        <input type="checkbox" name="Domain" value="Technology"> Technology<br><br>
+
+        Comments:<br>
+        <textarea name="Comments" rows="4" cols="40"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>
+<br><br>
+
+
+<h3>Form Q.3 </h3>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sports Registration Form</title>
+</head>
+
+<body>
+    <h2>Sports Registration Form</h2>
+    <form action="register.php" method="post">
+
+        Enrollment No:
+        <input type="text" name="EnrollmentNo" required><br><br>
+
+        Secret Key:
+        <input type="password" name="SecretKey" required><br><br>
+
+        Address:<br>
+        <textarea name="Address" rows="4" cols="40"></textarea><br><br>
+
+        College:
+        <select name="College">
+            <option value="PSE">Pacific College</option>
+            <option value="LD">LD College</option>
+            <option value="VGEC">VGEC</option>
+            <option value="GCET">GCET</option>
+        </select><br><br>
+
+        Branch:<br>
+        <input type="radio" name="Branch" value="CE"> CE<br>
+        <input type="radio" name="Branch" value="IT"> IT<br>
+        <input type="radio" name="Branch" value="ME"> ME<br><br>
+
+        Hobby:<br>
+        <input type="checkbox" name="Hobby" value="Cricket"> Cricket<br>
+        <input type="checkbox" name="Hobby" value="Football"> Football<br>
+        <input type="checkbox" name="Hobby" value="Chess"> Chess<br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>
