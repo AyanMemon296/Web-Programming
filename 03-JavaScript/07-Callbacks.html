@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        // hello();
+        // goodbye();
+
+        // function hello() {
+        //     console.log("Hello");
+        // }
+        // function goodbye() {
+        //     console.log("Goodbye");
+        // }
+
+
+        // hello();
+        // goodbye();
+
+        // function hello() {
+        // setTimeout(function(){
+        //     console.log("Hello (after 2 seconds)");
+        // }, 2000);
+        // }
+        // function goodbye() {
+        //     console.log("Goodbye");
+        // }
+
+
+        hello(goodbye);
+
+        function hello(callback) {
+            console.log("Hello");
+            callback();
+        }
+
+        // or 
+        // function hello(callback) {
+        //     setTimeout(function () {
+        //         console.log("Hello");
+        //         callback();
+        //     }, 2000);
+        // }
+
+        function goodbye() {
+            console.log("Goodbye");
+        }
+    </script>
+
+</body>
+
+</html>

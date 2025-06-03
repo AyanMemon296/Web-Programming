@@ -1,0 +1,86 @@
+<!-- Use of One Event: onclick -->
+
+<!-- <h3>Use of One Event: onclick</h3>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="text">Hello!</p>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText() {
+            document.getElementById("text").innerText = "You clicked!";
+        } 
+    </script>
+</body> -->
+
+</html>
+<br><br>
+
+<!-- Two Event Handlers for Text Box & Text Area -->
+
+<h3>Two Event Handlers for Text Box</h3>
+
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<input type="text" onfocus="this.style.background='lightblue'"  
+                 onblur="this.style.background='white'"> 
+ 
+</body> 
+</html>
+
+
+<h3>Two Event Handlers for Text Area</h3>
+
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<textarea onfocus="this.style.background='lightyellow'"  
+          oninput="document.getElementById('msg').innerText='Typing...'"> 
+</textarea> 
+ 
+<p id="msg"></p> 
+ 
+</body> 
+</html> 
+<br><br>
+
+<!-- Two Event Handlers for Button -->
+
+<h3>Two Event Handlers for Button</h3>
+
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<button onclick="alert('Clicked!')"  
+        onmouseover="this.style.background='orange'"> 
+        Test Button 
+</button> 
+ 
+</body> 
+</html> 
+
+<!-- Change text when button is clicked -->
+
+<h3>Change text when button is clicked</h3>
+
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<h2 id="head">Hello!</h2> 
+<button onclick="changeText()">Click Me</button> 
+ 
+<script> 
+function changeText() { 
+  document.getElementById("head").innerText = "Welcome!"; 
+} 
+</script> 
+ 
+</body> 
+</html>

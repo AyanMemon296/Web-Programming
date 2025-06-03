@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM Example</title>
+</head>
+
+<body>
+    <h3>DOM Objects/Example</h3>
+    <p id="greet">Hello Ayan!</p>
+
+    <!-- document Object Examples -->
+    <!-- 
+    document.title // Gives title of the page
+    document.body // Gives <body> of the page
+    document.getElementById("myId") // Finds element with id="myId" -->
+
+    
+        <!-- element Object Examples -->
+         
+        <script>
+            let para = document.getElementById("greet");
+            // para.innerText = "Welcome Ayan!"; write in browser console to see the output
+        </script>
+
+    </body>
+
+</html>
+<br><br>
+
+
+<h2>Second Example</h2>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2 id="title">Original Title</h2>
+    <button onclick="changeTitle()">Click Me</button>
+
+    <script>
+        function changeTitle() {
+            let heading = document.getElementById("title");
+            heading.innerText = "Title Changed!";
+        } 
+    </script>
+</body>
+
+</html>

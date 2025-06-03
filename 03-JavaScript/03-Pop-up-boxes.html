@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Pop-up Boxes</title>
+</head>
+
+<body>
+    <h2>Click buttons to test JavaScript Pop-up Boxes</h2>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+
+    <script>
+        function showAlert() {
+            alert("Hello Ayan! This is an alert box.");
+        }
+
+        function showConfirm() {
+            let result = confirm("Do you want to continue?");
+            if (result) {
+                alert("You clicked OK!");
+            } else {
+                alert("You clicked Cancel.");
+            }
+        }
+
+        function showPrompt() {
+            let name = prompt("What is your name?");
+            if (name) {
+                alert("Hello " + name + "!");
+            } else {
+                alert("You didn’t enter anything.");
+            }
+        }
+    </script>
+</body>
+
+</html>

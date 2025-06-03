@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<script> 
+  try { 
+    let a = 10; 
+    let b = a + c; // Error: 'c' is not defined 
+    document.write(b); 
+  } catch (err) { 
+    document.write("Error happened: " + err.message); 
+  } finally { 
+    document.write("<br>This block always runs."); 
+  } 
+</script> 
+ 
+</body> 
+</html> 
