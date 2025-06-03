@@ -1,0 +1,81 @@
+<!-- Write HTML and JavaScript code to validate the mobile number and email address using regular expression.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mobile & Email Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 5px 0;
+            width: 250px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Validate Mobile Number & Email</h2>
+
+    <form id="myForm" onsubmit="return validateForm()">
+
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="text" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number"><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="text" id="email" name="email" placeholder="Enter email address"><br>
+
+        <button type="submit">Validate</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            const mobile = document.getElementById('mobile').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message');
+
+            // Regular expression for 10-digit mobile number (only digits) 
+            const mobileRegex = /^[0-9]{10}$/;
+
+            // Simple email regex pattern 
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (!mobileRegex.test(mobile)) {
+                message.innerText = "Invalid mobile number! Enter exactly 10 digits.";
+                message.className = "error";
+                return false; // prevent form submission 
+            }
+
+            if (!emailRegex.test(email)) {
+                message.innerText = "Invalid email address!";
+                message.className = "error";
+                return false; // prevent form submission 
+            }
+
+            message.innerText = "Mobile number and Email are valid!";
+            message.className = "success";
+
+            return false; // prevent actual form submission for demo 
+        } 
+    </script>
+
+</body>
+
+</html>

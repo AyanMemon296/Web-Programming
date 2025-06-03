@@ -1,0 +1,80 @@
+<!-- (i) Write a JavaScript that handles following mouse event. If the mouse is over heading, change font color to 
+“green” and if the mouse goes out of the heading change it to “red”. 
+(ii) Put three buttons “OPEN NEW WINDOW”, ”CLOSE CHILD WINDOW”, ”CLOSE MAIN 
+WINDOW” in main HTML page. On click of first button, execute some JavaScript code that will open one 
+child window. Clicking on second button, child window will close and clicking on third button, main html 
+page will close. -->
+
+<!-- (i) JavaScript to handle mouse events on heading -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mouse Events</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <h1 id="myHeading">Hover over me!</h1>
+
+    <script>
+        const heading = document.getElementById('myHeading');
+
+        heading.addEventListener('mouseover', function () {
+            heading.style.color = 'green';  // mouse over -> green 
+        });
+
+        heading.addEventListener('mouseout', function () {
+            heading.style.color = 'red';    // mouse out -> red 
+        }); 
+    </script>
+</body>
+
+</html> -->
+
+<!-- (ii) HTML + JS for opening and closing windows -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Window Control</title>
+</head>
+
+<body>
+
+    <button id="openBtn">OPEN NEW WINDOW</button>
+    <button id="closeChildBtn">CLOSE CHILD WINDOW</button>
+    <button id="closeMainBtn">CLOSE MAIN WINDOW</button>
+
+    <script>
+        let childWindow = null;
+
+        document.getElementById('openBtn').addEventListener('click', function () {
+            // Open a new window (child window) 
+            childWindow = window.open('', '', 'width=400,height=300');
+            if (childWindow) {
+                childWindow.document.write('<h2>This is child window</h2>');
+            }
+        });
+
+        document.getElementById('closeChildBtn').addEventListener('click', function () {
+            // Close child window if opened 
+            if (childWindow && !childWindow.closed) {
+                childWindow.close();
+            } else {
+                alert('No child window open.');
+            }
+        });
+
+        document.getElementById('closeMainBtn').addEventListener('click', function () {
+            // Close main window 
+            window.close();
+        }); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!-- Write HTML and JavaScript code to validate the email address using regular expression. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Validation</title>
+    <style>
+        #message {
+            font-weight: bold;
+        }
+
+        .valid {
+            color: green;
+        }
+
+        .invalid {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Email Validation Form</h2>
+
+    <label for="email">Enter Email:</label>
+    <input type="text" id="email" name="email" />
+    <button onclick="validateEmail()">Validate</button>
+
+    <p id="message"></p>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message');
+
+            // Regular expression for simple email validation 
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (regex.test(email)) {
+                message.textContent = "Valid Email Address.";
+                message.className = "valid";
+            } else {
+                message.textContent = "Invalid Email Address.";
+                message.className = "invalid";
+            }
+        } 
+    </script>
+
+</body>
+
+</html>

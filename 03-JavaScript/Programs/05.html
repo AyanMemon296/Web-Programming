@@ -1,0 +1,38 @@
+<!-- Write an HTML and JavaScript program which accepts N as input and print N is odd or even number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Check Odd or Even</title>
+</head>
+
+<body>
+
+    <h2>Check if Number is Odd or Even</h2>
+
+    <label for="numberInput">Enter a Number:</label>
+    <input type="number" id="numberInput" />
+    <button onclick="checkOddEven()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkOddEven() {
+            const n = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(n)) {
+                document.getElementById('result').innerText = "Please enter a valid number.";
+                return;
+            }
+
+            if (n % 2 === 0) {
+                document.getElementById('result').innerText = n + " is Even.";
+            } else {
+                document.getElementById('result').innerText = n + " is Odd.";
+            }
+        } 
+    </script>
+
+</body>
+
+</html>

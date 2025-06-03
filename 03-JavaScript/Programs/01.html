@@ -1,0 +1,31 @@
+<!-- Create a webpage containing one button. Clicking on this button, change the size of the window & position. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Window Resize and Move</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <button id="resizeMoveBtn">Resize & Move Window</button>
+
+    <script>
+        document.getElementById('resizeMoveBtn').addEventListener('click', function () {
+            // Open a new window (400x300 initial size) 
+            let newWin = window.open('', '', 'width=400,height=300');
+            // Resize new window to 800x600 
+            newWin.resizeTo(800, 600);
+            // Move new window to coordinates (100, 100) 
+            newWin.moveTo(100, 100);
+            // Add some text in new window 
+            newWin.document.write('<h2>Hello Ayan! This is the new window.</h2>');
+        }); 
+    </script>
+</body>
+
+</html>

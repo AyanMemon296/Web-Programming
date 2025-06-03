@@ -1,0 +1,79 @@
+<!-- Design a form using HTML and JavaScript that asks the users to enter his date of birth and on clicking the 
+calculate Button it calls the function that calculates how many days are left in your birthday?  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Birthday Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Birthday Countdown Calculator</h2>
+
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob" required>
+
+    <button onclick="calculateDaysLeft()">Calculate Days Left</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateDaysLeft() {
+            const dobInput = document.getElementById('dob').value;
+            const result = document.getElementById('result');
+
+            if (!dobInput) {
+                result.innerText = "Please enter your Date of Birth.";
+                return;
+            }
+
+            const today = new Date();
+            // Set time to 0 for today 
+            today.setHours(0, 0, 0, 0);
+
+            const dob = new Date(dobInput);
+
+            // Birthday this year with time set to 0 
+            let nextBirthday = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+            nextBirthday.setHours(0, 0, 0, 0);
+
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+            }
+
+            const diff = nextBirthday - today;
+            const daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+            if (daysLeft === 0) {
+                result.innerText = "Happy Birthday! 🎉 Today is your birthday.";
+            } else {
+                result.innerText = `There are ${daysLeft} day(s) left until your next birthday.`;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

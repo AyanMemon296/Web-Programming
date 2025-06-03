@@ -1,0 +1,76 @@
+<!-- Write a JavaScript to read data from XML File and print it in tabular manner. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Read XML and Display Table</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Students Data from XML</h2>
+  <button onclick="loadXML()">Load Data</button>
+  <br><br>
+  <div id="tableDiv"></div>
+
+  <script>
+    function loadXML() {
+      // Create a new XMLHttpRequest object 
+      let xhttp = new XMLHttpRequest();
+
+      // Define what happens on successful data submission 
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          // Parse XML response 
+          let xmlDoc = this.responseXML;
+
+          // Get all student elements 
+          let students = xmlDoc.getElementsByTagName("student");
+
+          // Start table HTML 
+          let table = "<table><tr><th>Name</th><th>Roll No</th><th>Semester</th></tr>";
+
+          // Loop through each student node and extract data 
+          for (let i = 0; i < students.length; i++) {
+            let name = students[i].getElementsByTagName("name")[0].textContent;
+            let rollno = students[i].getElementsByTagName("rollno")[0].textContent;
+            let semester =
+              students[i].getElementsByTagName("semester")[0].textContent;
+
+            table += `<tr> 
+                            <td>${name}</td> 
+                            <td>${rollno}</td> 
+                            <td>${semester}</td> 
+                          </tr>`;
+          }
+
+          table += "</table>";
+
+          // Display table in div 
+          document.getElementById("tableDiv").innerHTML = table;
+        }
+      };
+
+      // Open the XML file 
+      xhttp.open("GET", "data.xml", true);
+      xhttp.send();
+    } 
+  </script>
+
+</body>
+
+</html>

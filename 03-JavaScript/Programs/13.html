@@ -1,0 +1,70 @@
+<!-- Write HTML and JavaScript code to validate the username and password. 
+1. Both fields should not be blank. 
+2. Username contains only number. 
+3. Minimum password length 8. 
+4. Password contains at least one capital letter, special character and number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Username and Password Validation</title>
+</head>
+
+<body>
+
+    <h2>Login Validation Form</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <label for="username">Username (Numbers only):</label><br />
+        <input type="text" id="username" name="username" /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            // 1. Both fields should not be blank 
+            if (username === '' || password === '') {
+                alert("Both Username and Password must be filled.");
+                return false;
+            }
+
+            // 2. Username contains only numbers 
+            const usernamePattern = /^[0-9]+$/;
+            if (!usernamePattern.test(username)) {
+                alert("Username must contain only numbers.");
+                return false;
+            }
+
+            // 3. Minimum password length 8 
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            // 4. Password contains at least one capital letter, one special character, and one number
+            // Regex explanation: 
+            // (?=.*[A-Z]) -> at least one uppercase letter 
+            // (?=.*\d) -> at least one digit 
+            // (?=.*[!@#$%^&*]) -> at least one special character (adjust special chars if needed) 
+            const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/;
+            if (!passwordPattern.test(password)) {
+                alert("Password must contain at least one uppercase letter, one number, and one special character(!@#$ %^&*).");
+                return false;
+            }
+
+            alert("Validation successful!");
+            return true;
+        } 
+    </script>
+</body>
+
+</html>

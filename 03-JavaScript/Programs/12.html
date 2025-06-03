@@ -1,0 +1,63 @@
+<!-- Design a login form using HTML & JavaScript with following validations using Regular Expression on 
+username and password fields. 
+1. Username and Password should not be both blank 
+2. Username should not start with digit, _, @ or # 
+3. Password length must be 8 to 16 characters  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Form</title>
+</head>
+
+<body>
+
+    <h2>Login Form</h2>
+    <form id="loginForm" onsubmit="return validateLogin()">
+
+        <label for="username">Username:</label><br />
+        <input type="text" id="username" name="username" /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
+
+        <input type="submit" value="Login" />
+
+    </form>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            // 1. Check username and password not both blank 
+            if (username === '' && password === '') {
+                alert("Username and Password cannot both be blank.");
+                return false;
+            }
+
+            // 2. Username should NOT start with digit, _, @, or # 
+            // Regex explanation: 
+            // ^ - start of string 
+            // [^0-9_@#] - first character should NOT be digit(0-9), underscore(_), at(@), or hash(#)
+
+            const usernamePattern = /^[^0-9_@#].*/;
+            if (!usernamePattern.test(username)) {
+                alert("Username should not start with digit, '_', '@', or '#'.");
+                return false;
+            }
+            // 3. Password length must be 8 to 16 characters 
+            if (password.length < 8 || password.length > 16) {
+                alert("Password length must be between 8 and 16 characters.");
+                return false;
+            }
+            alert("Login successful!");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

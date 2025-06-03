@@ -1,0 +1,72 @@
+<!-- Design Student registration form including roll no, name, password and mobile number using HTML. Also 
+write JavaScript to validate following: 
+• All Fields are compulsory. 
+• Password length should be 6 to 8 characters long. 
+• Mobile number must be of 10 digits only. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+
+        <label for="rollNo">Roll No:</label><br />
+        <input type="text" id="rollNo" name="rollNo" /><br /><br />
+
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
+
+        <label for="mobile">Mobile Number:</label><br />
+        <input type="text" id="mobile" name="mobile" /><br /><br />
+
+        <input type="submit" value="Register" />
+
+    </form>
+
+    <script>
+        function validateForm() {
+            // Get form field values 
+            const rollNo = document.getElementById('rollNo').value.trim();
+            const name = document.getElementById('name').value.trim();
+            const password = document.getElementById('password').value;
+            const mobile = document.getElementById('mobile').value.trim();
+
+            // Check if any field is empty 
+            if (rollNo === '' || name === '' || password === '' || mobile === '') {
+                alert('All fields are compulsory.');
+                return false; // Prevent form submission 
+            }
+
+            // Check password length (6 to 8 characters) 
+            if (password.length < 6 || password.length > 8) {
+                alert('Password must be 6 to 8 characters long.');
+                return false;
+            }
+
+            // Check mobile number: exactly 10 digits, only numbers allowed 
+            const mobilePattern = /^[0-9]{10}$/;
+            if (!mobilePattern.test(mobile)) {
+                alert('Mobile number must be exactly 10 digits.');
+                return false;
+            }
+
+            // If all validations pass 
+            alert('Form submitted successfully!');
+            return true;  // Allow form submission 
+        } 
+    </script>
+</body>
+
+</html>

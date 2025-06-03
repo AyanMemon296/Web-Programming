@@ -1,0 +1,43 @@
+<!-- Write a JavaScript to find whether entered number by user is prime or not.  
+Write a JavaScript to find whether entered number by user is Prime or Not. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prime Number Check</title>
+</head>
+
+<body>
+
+    <script>
+        // Function to check prime 
+        function isPrime(num) {
+            if (num <= 1) return false;  // numbers <= 1 are not prime 
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;  // divisible, so not prime 
+                }
+            }
+            return true; // no divisor found, prime 
+        }
+
+        // Get number from user 
+        let userInput = prompt("Enter a number to check if it is prime or not:");
+        let number = parseInt(userInput);
+
+        if (isNaN(number)) {
+            alert("Please enter a valid number!");
+        } else {
+            if (isPrime(number)) {
+                alert(number + " is a prime number.");
+            } else {
+                alert(number + " is not a prime number.");
+            }
+        } 
+    </script>
+
+</body>
+
+</html>

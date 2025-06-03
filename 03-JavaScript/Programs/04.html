@@ -1,0 +1,48 @@
+<!-- Write a JavaScript program that accepts N as input and prints the first N odd numbers.  
+Create an HTML and JavaScript program which accepts N as input and print first N odd numbers.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Print First N Odd Numbers</title>
+</head>
+
+<body>
+
+    <h2>Print First N Odd Numbers</h2>
+
+    <label for="numberInput">Enter N:</label>
+    <input type="number" id="numberInput" min="1" />
+    <button onclick="printOddNumbers()">Print Odd Numbers</button>
+
+    <p id="result"></p>
+
+    <script>
+        function printOddNumbers() {
+            const n = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(n) || n <= 0) {
+                document.getElementById('result').innerText = "Please enter a valid positive number."; 
+                return;
+            }
+
+            let result = [];
+            let count = 0;
+            let num = 1;
+
+            while (count < n) {
+                if (num % 2 !== 0) {
+                    result.push(num);
+                    count++;
+                }
+                num++;
+            }
+
+            document.getElementById('result').innerText = "First " + n + " odd numbers: "
+                + result.join(", ");
+        } 
+    </script>
+
+</body>
+
+</html>

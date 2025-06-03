@@ -1,0 +1,48 @@
+<!-- Write an HTML and JavaScript program that accepts N as input and print all prime numbers. (e.g. input N=10 then answer is 3,5,7) -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Print Prime Numbers</title>
+</head>
+
+<body>
+
+    <h2>Print Prime Numbers up to N</h2>
+
+    <label for="numberInput">Enter N: </label>
+    <input type="number" id="numberInput" min="3" />
+    <button onclick="printPrimes()">Show Primes</button>
+
+    <p id="result"></p>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false; // not prime 
+            if (num === 2) return true; // 2 is prime 
+            if (num % 2 === 0) return false; // even numbers > 2 not prime 
+
+            for (let i = 3; i <= Math.sqrt(num); i += 2) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function printPrimes() {
+            const N = parseInt(document.getElementById('numberInput').value);
+            let primes = [];
+
+            for (let i = 3; i < N; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            document.getElementById('result').innerText = "Prime numbers: " + primes.join(", ");
+        } 
+    </script>
+
+</body>
+
+</html>
