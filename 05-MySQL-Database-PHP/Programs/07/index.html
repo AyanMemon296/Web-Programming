@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Student Management</title> 
+</head> 
+<body> 
+    <h2>Student Form</h2> 
+    <form action="insert.php" method="POST"> 
+        Enrollment No: <input type="text" name="enroll" required><br><br> 
+        Name: <input type="text" name="name" required><br><br> 
+        Semester: <input type="number" name="sem" required><br><br> 
+        Gender: 
+        <select name="gender" required> 
+            <option value="">Select</option> 
+            <option value="Male">Male</option> 
+            <option value="Female">Female</option> 
+        </select><br><br> 
+        Qualification: <input type="text" name="qual" required><br><br> 
+        <input type="submit" value="Insert"> 
+    </form> 
+ 
+    <br><br> 
+ 
+    <h3>Other Operations</h3> 
+    <form action="update.php" method="POST"> 
+        <input type="submit" value="Update Record"> 
+    </form> 
+ 
+    <form action="delete.php" method="POST"> 
+        <input type="submit" value="Delete Record"> 
+    </form> 
+</body> 
+</html> 
