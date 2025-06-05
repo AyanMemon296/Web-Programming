@@ -1,1 +1,0 @@
-Write a web application code using PHP, HTML and MySQL for Employees that stores employee’s id, name, department, designation, etc. in database. Create proper GUI including buttons that run separate .php file for each database operation like insert, delete, update etc. 
