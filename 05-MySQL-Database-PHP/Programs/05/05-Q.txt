@@ -1,1 +1,0 @@
-Write HTML and PHP program to read and store employee information such as e_id, e_name, e_dept, e_exp and e_salary from employee table. Make a search module to search a record from the database based on e_dept and display the result.
