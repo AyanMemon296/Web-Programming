@@ -5,7 +5,7 @@ Each subfolder demonstrates how XML data can be structured and styled or transfo
 
 ---
 
-## 📁 Subfolders
+## 📁 Subfolder
 
 - `Programs/` – Contains folders with XML, XSL, and XSLT examples
 
