@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE library SYSTEM "books.dtd"> 
+<?xml-stylesheet type="text/xsl" href="books.xsl"?> 
+ 
+<library> 
+  <book> 
+    <id>B001</id> 
+    <title>Learn Web Development</title> 
+    <author>Ayan Memon</author> 
+    <price>450</price> 
+  </book> 
+  <book> 
+    <id>B002</id> 
+    <title>PHP Programming</title> 
+    <author>User2</author> 
+    <price>550</price> 
+  </book> 
+</library> 
