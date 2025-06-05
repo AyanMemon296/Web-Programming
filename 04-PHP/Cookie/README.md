@@ -1,6 +1,7 @@
-# PHP Cookie
+# PHP – Cookie Programs
 
-This folder contains PHP Cookie program for learning and practice in Web Programming (WP).
+This folder contains basic **cookie-based programs** in PHP.  
+It demonstrates how to create, access, and delete cookies.
 
 ---
 
@@ -9,6 +10,6 @@ This folder contains PHP Cookie program for learning and practice in Web Program
 This work is created by **Ayan Memon** for educational use.
 
 > **Do NOT copy, re-upload, or share without proper credit.**  
-> Violators may be reported with **DMCA takedown** and **GitHub action**.
+> Violators may face **DMCA takedown** and **GitHub account reporting**.
 
 ---
