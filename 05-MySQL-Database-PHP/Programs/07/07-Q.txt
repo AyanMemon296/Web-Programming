@@ -1,1 +1,0 @@
-Develop a web application code using PHP, HTML and MySQL for Students that stores student's enrolment no., name, semester, gender, qualification, etc. in database. Create proper GUI including buttons that run separate .php file for each database operation like insert, update, delete etc.
