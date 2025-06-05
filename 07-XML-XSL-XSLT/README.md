@@ -7,10 +7,7 @@ Each subfolder demonstrates how XML data can be structured and styled or transfo
 
 ## 📁 Subfolders
 
-- `01/`   
-- `02/`   
-
-You can open the `.xml` files in a browser to see how the data is rendered using the linked XSL or XSLT file.
+- `Programs/` – Contains folders with XML, XSL, and XSLT examples
 
 ---
 
