@@ -1,0 +1,10 @@
+<students> 
+  <student> 
+    <name>Ayan</name> 
+    <course>BE</course> 
+  </student> 
+  <student> 
+    <name>User2</name> 
+    <course>BCA</course> 
+  </student> 
+</students> 
