@@ -1,6 +1,7 @@
-# PHP Session
+# PHP – Session Programs
 
-This folder contains PHP Session program for learning and practice in Web Programming (WP).
+This folder contains basic **session handling programs** in PHP.  
+It includes how to start a session, store values, and destroy a session.
 
 ---
 
@@ -9,7 +10,6 @@ This folder contains PHP Session program for learning and practice in Web Progra
 This work is created by **Ayan Memon** for educational use.
 
 > **Do NOT copy, re-upload, or share without proper credit.**  
-> Violators may be reported with **DMCA takedown** and **GitHub action**.
+> Violators may face **DMCA takedown** and **GitHub account reporting**.
 
 ---
-
