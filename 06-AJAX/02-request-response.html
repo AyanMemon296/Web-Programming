@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Simple AJAX Demo</title> 
+</head> 
+<body> 
+ 
+<h2>AJAX Request-Response Example</h2> 
+ 
+<button onclick="loadData()">Get Server Data</button> 
+ 
+<div id="result" style="margin-top:20px; font-weight: bold;"></div> 
+ 
+<script> 
+function loadData() { 
+    // Create XMLHttpRequest object 
+    var xhr = new XMLHttpRequest(); 
+ 
+    // Define callback for response 
+    xhr.onreadystatechange = function() { 
+        if (xhr.readyState == 4 && xhr.status == 200) { 
+            // Update the div with server response 
+            document.getElementById('result').innerHTML = xhr.responseText; 
+        } 
+    }; 
+ 
+    // Initialize GET request to server-side file 
+    xhr.open('GET', 'server.php', true); 
+ 
+    // Send the request 
+    xhr.send(); 
+} 
+</script> 
+ 
+</body> 
+</html> 

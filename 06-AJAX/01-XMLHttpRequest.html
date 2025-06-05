@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX XMLHttpRequest Example</title>
+</head>
+
+<body>
+
+    <h2>Load Text File Content using AJAX</h2>
+
+    <button onclick="loadTextFile()">Load Text</button>
+
+    <div id="output" style="margin-top:20px; white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; width: 300px;"></div>
+
+    <script>
+        function loadTextFile() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('output').innerText = xhr.responseText;
+                }
+            };
+
+            xhr.open('GET', 'sample.txt', true);
+            xhr.send();
+        } 
+    </script>
+
+</body>
+
+</html>
