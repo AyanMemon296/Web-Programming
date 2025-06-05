@@ -1,6 +1,0 @@
-<!ELEMENT library (book+)> 
-<!ELEMENT book (id, title, author, price)> 
-<!ELEMENT id (#PCDATA)> 
-<!ELEMENT title (#PCDATA)> 
-<!ELEMENT author (#PCDATA)> 
-<!ELEMENT price (#PCDATA)> 
