@@ -1,0 +1,1 @@
+Write a web application code using PHP, HTML and MySQL for Students that stores EnrollmentNo, Name, College, Branch, Year etc. in database. Make separate PHP file for each database operation like insert, update and delete operation.
